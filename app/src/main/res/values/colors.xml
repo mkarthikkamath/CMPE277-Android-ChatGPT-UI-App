@@ -10,4 +10,6 @@
     <color name="secondaryTextColor">#89000000</color>
     <color name="dividerColor">#1F000000</color>
     <color name="responseBackground">#F5F5F5</color>
+    <color name="lightBlue">#ADD8E6</color>
+    <color name="yellow">#FFFF00</color>
 </resources>

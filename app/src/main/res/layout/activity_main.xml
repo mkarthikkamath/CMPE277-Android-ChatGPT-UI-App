@@ -1,16 +1,39 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/lightBlue"
     android:padding="16dp">
+
+    <!-- Add ImageView to display the logo -->
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sjsu_logo"
+        android:contentDescription="@string/logo"
+        android:layout_centerHorizontal="true"/>
 
     <EditText
         android:id="@+id/editTextPrompt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/prompt_hint"
+        android:layout_below="@id/imageViewLogo"
         android:background="@drawable/edit_text_style"
-        android:padding="12dp"/>
+        android:padding="12dp"
+        android:layout_marginTop="16dp"/>
+
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPrompt"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_style"
+        android:text="@string/send_button"
+        android:textColor="@color/yellow"
+    android:padding="12dp"/>
 
     <Button
         android:id="@+id/buttonCancel"
@@ -21,18 +44,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/button_style"
-        android:text="Cancel"
-        android:padding="12dp"/>
-
-    <Button
-        android:id="@+id/buttonSend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editTextPrompt"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/button_style"
-        android:text="@string/send_button"
-        android:padding="12dp"/>
+        android:text="@string/cancel_button"
+        android:textColor="@color/yellow"
+    android:padding="12dp"/>
 
     <TextView
         android:id="@+id/textViewResponse"
