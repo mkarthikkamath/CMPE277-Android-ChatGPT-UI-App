@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">ChatGPTApp</string>
+    <string name="send_button">Send</string>
+    <string name="prompt_hint">Enter your prompt here...</string>
+    <string name="response_hint">Your response will appear here...</string>
 </resources>

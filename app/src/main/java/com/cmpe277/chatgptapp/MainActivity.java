@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     private EditText editTextPrompt;
-    private Button buttonSend;
+    private Button buttonSend, buttonCancel;
     private TextView textViewResponse;
 
     @Override
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         editTextPrompt = findViewById(R.id.editTextPrompt);
         buttonSend = findViewById(R.id.buttonSend);
+        buttonCancel = findViewById(R.id.buttonCancel);
         textViewResponse = findViewById(R.id.textViewResponse);
 
         buttonSend.setOnClickListener(new View.OnClickListener() {
@@ -30,5 +31,16 @@ public class MainActivity extends AppCompatActivity {
                 new ChatGPTAsyncTask(response -> textViewResponse.setText(response)).execute(prompt);
             }
         });
+
+        // Add an onClickListener for the Cancel button
+        buttonCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Clear the EditText and TextView
+                editTextPrompt.setText("");
+                textViewResponse.setText("");
+            }
+        });
     }
 }
+
